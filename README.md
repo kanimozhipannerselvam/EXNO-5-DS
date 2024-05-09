@@ -18,273 +18,126 @@ STEP 4:Apply the various data visualization tools wherever necessary.
 STEP 5:Include Necessary parameters in each functions.
 
 # Coding and Output:
- ~~~
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-~~~
-~~~
-x=np.arange(0,10)
-y=np.arange(11,21)
-x
-y
-~~~
 
-![Screenshot 2024-04-28 145938](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/1cd7f531-6748-4b3a-a86c-b183341dfbd7)
-![Screenshot 2024-04-28 145946](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/d70b19e5-7476-4d5d-9cc3-3ba1cb99ed63)
-~~~
-x=np.arange(40,50)
-y=np.arange(50,60)
-x
-y
-~~~
-![Screenshot 2024-04-28 150122](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/d069289a-f353-488e-9591-e2cbb70f66b8)
-![Screenshot 2024-04-28 150129](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/c7e89fa4-0c57-454b-9c37-1a235581fa88)
-~~~
-#Scatterplot
-plt.scatter(x,y,c='r')
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.title('Graph in 2D')
-plt.savefig('Test.png')
-~~~
-![Screenshot 2024-04-28 152616](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/f8d03027-984e-4c93-bea8-61e862e983e5)
-~~~
-y=x*x
-y
-~~~
-![Screenshot 2024-04-28 152727](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/508e913d-45aa-4019-ac6e-3bb0957e41dc)
-~~~
-plt.plot(x,y,'g*',linestyle='dashed',linewidth=2,markersize=12)
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.title('2D Diagram')
-~~~
-![Screenshot 2024-04-28 152809](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/945fac89-77f2-4d35-b687-d9de408f2808)
-~~~
-plt.subplot(2,2,1)
-plt.plot(x,y,'r--')
-plt.subplot(2,2,2)
-plt.plot(x,y,'g*--')
-plt.subplot(2,2,3)
-plt.plot(x,y,'bo')
-plt.subplot(2,2,4)
-plt.plot(x,y,'go')
-~~~
-![Screenshot 2024-04-28 152849](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/e31f9ae1-743f-40ab-8981-0757507e1d5d)
-~~~
-# Compute the x and y coordinates for points on a
-x=np.arange(0,4*np.pi,0.1)
-y=np.sin(x)
-plt.title("sine wave form")
-
-#Plot the points using matplotlib
-plt.plot(x,y)
-plt.show()
-~~~
-![Screenshot 2024-04-28 152930](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/be5de64e-2fd5-492d-bc12-d28ca4ceebc7)
-~~~
-#BAR Chart
-x=[2,8,10]
-y=[11,16,9]
-x2=[3,9,11]
-y2=[6,15,7]
-plt.bar(x,y,color='r')
-plt.bar(x2,y2,color='g')
-plt.title('Bar graph')
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.show()
-~~~
-![Screenshot 2024-04-28 153021](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/97242f80-31f8-4e5b-9515-ec704c4ac331)
-~~~
-x=np.arange(1,11)
-y=3*x+5
-plt.title("Matplotlib demo")
-plt.xlabel("x axis caption")
-plt.ylabel("y axis caption")
-plt.plot(x,y)
-plt.show()
-~~~
-![Screenshot 2024-04-28 153959](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/3eab5f54-0b3b-4a80-9a6b-1674989d2ac2)
-
-~~~
-x=np.arange(0,5 *np.pi,0.1)
-y_sin=np.sin(x)
-y_cos=np.cos(x)
-plt.subplot(2,1,1)
-plt.plot(x,y_sin,'r--')
-plt.title('Sine')
-plt.subplot(2,1,2)
-plt.plot(x,y_cos,'g--')
-plt.title('Cosine')
-plt.show()
-~~~
-![Screenshot 2024-04-28 154338](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/ff7eaad8-2fbf-4679-bea3-197ffc921d14)
-~~~
-a=np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27])
-plt.hist(a,color='g')
-plt.title("histogram")
-plt.show()
-~~~
-![Screenshot 2024-04-28 154423](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/609c39c2-e5bb-4251-8103-b87736ca3c27)
-~~~
-labels=['A','B','C']
-values=[1,4,2]
-plt.figure(figsize=(5,3),dpi=100)
-bars=plt.bar(labels,values,color='green')
-patterns=['-','*','+']
-for bar in bars:
-  bar.set_hatch(patterns.pop(0))
-plt.savefig('barchat.png',dpi=100)
-plt.show()
-~~~
-![Screenshot 2024-04-28 154437](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/8ee09a70-3dff-4eb0-88dc-59afafee371b)
-~~~
+```
 import matplotlib.pyplot as plt
-x_values = [0,1,2,3,4,5]
-y_values = [0,1,4,9,16,25]
-plt.plot(x_values,y_values)
+x_val = [0,1,2,3,4,5]
+y_val = [0,1,4,9,16,25]
+plt.plot(x_val,y_val)
 plt.show()
-~~~
-![Screenshot 2024-04-28 154556](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/9ef8f0c2-7455-495e-bd44-59222291a5da)
-~~~
+```
+![326323870-c3b1567c-eda6-46f9-97c0-5edcbc751613](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/d7d92972-4b97-4841-ab7a-70f7a56b8e8d)
+
+```
 import matplotlib.pyplot as plt
-x=[1,2,3]
-y=[2,4,1]
+x = [1,2,3]
+y = [2,4,1]
 plt.plot(x,y)
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
-plt.title('My first graph!')
+plt.title('My first graph')
 plt.show()
-~~~
-![Screenshot 2024-04-28 154604](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/f31c88a6-6028-4dcb-a1c8-4fbbbfb970d1)
-~~~
+```
+![326323898-0e9fe2e2-0d99-4f7e-bdb7-85543ac9252b](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/7248a80b-c0b2-43d6-8dd9-13c9ba348e70)
+
+```
 import matplotlib.pyplot as plt
-x1=[1,2,3]
-y1=[2,4,1]
-plt.plot(x1,y1,label="line 1")
-x2=[1,2,3]
-y2=[4,1,3]
-plt.plot(x2,y2,label="line2")
+x1 = [1,2,3]
+y1 = [2,5,3]
+plt.plot(x1,y1,label = 'line 1')
+x2 = [1,2,3]
+y2 = [3,1,6]
+plt.plot(x2,y2,label = 'line 2')
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
-plt.title('Two lines on same graph')
+plt.title("Two lines on the same graph")
 plt.legend()
 plt.show()
-~~~
-![Screenshot 2024-04-28 154811](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/91acd162-fd82-463e-84d8-687aef9ad3b6)
-~~~
-import matplotlib.pyplot as plt
-x = [1,2,3,4,5,6]
-y = [2,4,1,5,2,6]
-plt.plot(x,y,color='green',linestyle='dashed',linewidth=3,
-         marker='o',markerfacecolor='blue',markersize=12)
-plt.ylim(1,8)
-plt.xlim(1,8)
-plt.xlabel('x-axis')
-plt.ylabel('y-axis')
-plt.title('Some cool customization')
-plt.show()
-~~~
-![Screenshot 2024-04-28 154854](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/942335fb-50b9-4f75-8589-ac2b8e4a042a)
-~~~
-yield_apples = [0.895,0.91,0.919,0.926,0.929,0.931]
-plt.plot(yield_apples)
-~~~
-![Screenshot 2024-04-28 154931](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/8e8a7101-671b-4ccd-b0d1-5504f1fdf34d)
-~~~
-years=[2010,2011,2012,2013,2014,2015]
-yield_apples = [0.895,0.91,0.919,0.926,0.929,0.931]
-plt.plot(years,yield_apples)
-~~~
-![Screenshot 2024-04-28 155007](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/2df6d348-97d6-4fa8-a1c2-b01aff92c891)
-~~~
-years=range(2000,2012)
-apples=[0.895,0.91,0.919,0.926,0.929,0.931,0.934,0.936,0.937,0.9375,0.9372,0.939]
-oranges=[0.962,0.941,0.930,0.923,0.918,0.900,0.907,0.904,0.901,0.898,0.9,0.896]
-plt.plot(years,apples)
-plt.plot(years,oranges)
-plt.xlabel("year")
-plt.ylabel("Yield(toes per hectare)");
-~~~
-![Screenshot 2024-04-28 155045](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/7e3d05ad-a32f-4763-93eb-3fe121805d66)
-~~~
-plt.figure(figsize=(12,6))
-plt.plot(years,oranges,marker='o')
-plt.title("Yield of oranges (toes per hectare)");
-~~~
-![Screenshot 2024-04-28 155143](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/32d91b16-1963-4e74-92ce-a428f84350dc)
-~~~
-plt.plot(years,apples,marker='o')
-plt.plot(years,oranges,marker='x')
-plt.xlabel('Year')
-plt.ylabel('Yield (tons per hectare)')
-plt.title("Crop Yeilds in Kanto")
-plt.legend(['Apples','Oranges'])
-~~~
-![Screenshot 2024-04-28 155217](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/f7575df2-644c-4b25-8602-12bcc13c2558)
-~~~
-import matplotlib.pyplot as plt
-x_values = [1,2,3,4,5,6,7,8,9,10]
-y_values = [2,4,5,7,6,8,9,11,12,12]
-plt.scatter(x,y,label="stars",color="blue",marker="*",s=30)
-plt.xlabel('x-axis')
-plt.ylabel('y-axis')
-plt.title("My scatter plot!")
-plt.legend()
-plt.show()
-~~~
-![Screenshot 2024-04-28 155256](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/b8c7e7e9-7764-47d4-bfde-f8e5d3517dcb)
-~~~
-AREA CHART
-~~~
-~~~
+```
+![326323923-7678c654-4c38-4d56-9739-82c396ee8ada](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/9694ef58-0b87-49e9-a281-a70d06ebca2c)
+
+```
 import matplotlib.pyplot as plt
 import numpy as np
-x=[1,2,3,4,5]
-y1=[10,12,14,16,18]
-y2=[5,7,9,11,13]
-y3=[2,4,6,8,10]
-plt.fill_between(x,y1,color="blue")
-plt.fill_between(x,y2,color="green")
-plt.plot(x,y1,color='red')
-plt.plot(x,y2,color='black')
-plt.legend(['y1','y2'])
+x = [1,2,3,4,5]
+y1 = [10,12,14,16,18]
+y2 = [5,7,9,11,13]
+y3 = [2,4,6,8,10]
+plt.fill_between(x,y1,color = 'blue')
+plt.fill_between(x,y2,color = 'orange')
+```
+![326323942-73207267-25b7-4d47-8ddc-8de6c259faa8](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/731da65b-c04a-4937-9ac3-752b9f592564)
+
+```
+plt.stackplot(x,y1,y2,y3,labels = ['line1','line2','line3'])
+plt.legend(loc = 'upper left')
+plt.title('Stacked line charts')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
 plt.show()
-~~~
-![Screenshot 2024-04-28 155404](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/c2323a0c-e924-42f3-925a-d2781f912390)
-~~~
-x=[1,2,3,4,5]
-y1=[10,12,14,16,18]
-y2=[5,7,9,11,13]
-y3=[2,4,6,8,10]
-plt.stackplot(x,y1,y2,y3,labels=['Line1','Line2','Line3'])
-plt.legend(loc='upper left')
-plt.title('Stacked Line Chart')
-plt.xlabel("X-axis")
-plt.ylabel("Y-axis")
-plt.show()
-~~~
-![Screenshot 2024-04-28 155433](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/a7b871ab-91e0-4bdb-bfa3-ab08c529cbb6)
-~~~
-SPLINE CHART
-~~~
-~~~
+```
+![326323981-85a5c274-6f3c-4644-916f-8911a32ab070](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/ab83c4b0-dcef-404a-9697-7eadadfff36b)
+
+
+```
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.interpolate import make_interp_spline
-x = np.array([1,2,3,4,5,6,7,8,9,10])
-y = np.array([2,4,5,6,7,8,8,10,11,12])
-spl=make_interp_spline(x,y)
-x_smooth=np.linspace(x.min(),x.max(),100)
-y_smooth=spl(x_smooth)
-plt.plot(x,y,'o',label='data')
-plt.plot(x_smooth,y_smooth,'-',label='spline')
+val = [2,4,7,3]
+names = ['A','B','C','D']
+plt.bar(names, val,color = 'purple')
+plt.show()
+```
+![326324010-bbef76a4-0018-454e-81af-c4c29f91cc01](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/1df9ae73-abe4-4b51-bc89-41184ed7fb2b)
+
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+ages = [2,6,4,12,13,12,16,18,18,19,26,24,39,34,45,42,54,56,90,56,86,79]
+range = (0,100)
+bins = 10
+plt.hist(ages,bins,range,color='green',histtype='bar',rwidth=0.8)
+plt.xlabel('age')
+plt.ylabel('no of people')
+plt.title('histogram')
+plt.show()
+```
+
+![326324408-45c9d44d-536f-4d4b-a30a-a1556a5e4762](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/66068b55-745d-46e4-a02d-bd4d1f4d5dc0)
+
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+np.random.seed(0)
+data=np.random.normal(loc=0,scale=1,size=100)
+data
+```
+
+![326324171-57013638-cf5c-4384-807d-a5ae720fac62](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/cec76ee1-a050-4968-b6ab-0257bd348d36)
+
+```
+fig,ax=plt.subplots()
+ax.boxplot(data)
+ax.set_xlabel("data")
+ax.set_ylabel("values")
+ax.set_title("box plot")
+```
+
+![326324369-c1307c5c-99e4-4e67-b0a0-2a59ef9eecc6](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/43dbeac9-0b61-4bf4-ac08-791a4b76c383)
+
+
+```
+import matplotlib.pyplot as plt
+activities=['eat','sleep','work','play']
+slices=[3,7,8,6]
+colors=['r','y','g','b']
+plt.pie(slices,labels = slices,colors=colors,startangle=90,shadow = True,explode = (0,0,0.1,0),radius=1.2,autopct='%1.1f%%')
 plt.legend()
 plt.show()
-~~~
-![Screenshot 2024-04-28 155517](https://github.com/Dhanu654/EXNO-5-DS/assets/148514965/e66e9a37-73d8-4deb-8479-8ce4e0958559)
+```
+![326324333-aff6791e-db9d-4bff-8f4a-6ee9444d5913](https://github.com/kanimozhipannerselvam/EXNO-5-DS/assets/119476060/25a8f714-1b81-4f8f-87ee-2de131db817c)
+
 
 # Result:
- Thus the program to Perform Data Visualization using matplot python library for the given datas is been implemented.
+  Thus, We have successfullu performed Data Visualization using matplot python library for the given datas.
